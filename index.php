@@ -49,11 +49,11 @@ include 'global-components/nav.php';
 						<div class="star mt-3">
 							<b>Oceń książkę:</b>
 							<div class="d-flex align-items-center">
-								<span class="material-symbols-outlined">star</span>
-								<span class="material-symbols-outlined">star</span>
-								<span class="material-symbols-outlined">star</span>
-								<span class="material-symbols-outlined">star</span>
-								<span class="material-symbols-outlined">star</span>
+								<?php
+								for ($i = 1; $i <= 5; $i++) {
+									echo '<span class="material-symbols-outlined">star</span>';
+								}
+								?>
 								<span class="ms-2">0/5</span>
 							</div>
 						</div>
