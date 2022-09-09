@@ -1,7 +1,6 @@
 <?php
 include 'global-components/head.php';
 include 'global-components/nav.php';
-require_once 'config.php';
 ?>
 <main role="main" class="py-5">
 	<div class="container">
