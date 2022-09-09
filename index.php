@@ -1,6 +1,6 @@
 <?php
-include 'global-components/head.php';
-include 'global-components/nav.php';
+include 'components/head.php';
+include 'components/nav.php';
 ?>
 <main role="main" class="py-5">
 	<div class="container">
