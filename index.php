@@ -67,10 +67,12 @@ include 'global-components/nav.php';
 								<?php endif; ?>
 							</p>
 						</div>
-						<button class="mt-3 button--primary d-flex">
-							<span class="material-symbols-outlined button__icon-function">auto_stories</span>
-							<span>Wypożycz książke</span>
-						</button>
+						<?php if($books_card_item['loan_status'] === true): ?>
+							<button class="mt-3 button--primary d-flex">
+								<span class="material-symbols-outlined button__icon-function">auto_stories</span>
+								<span>Wypożycz książke</span>
+							</button>
+						<?php endif;?>
 					</div>
 				</div>
 			</section>
