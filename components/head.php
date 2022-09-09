@@ -18,4 +18,11 @@
 <?php
 	$url_images = "images/books/";
 	include './config.php';
+
+	// if(isset($_POST['email']) && isset( $_POST['password'])) {
+	// 	header('location: index.php');
+	// } else{
+	// 	header('location: login.php');
+	// 	exit();
+	// }
 ?>

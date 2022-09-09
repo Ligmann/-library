@@ -37,6 +37,31 @@
 	font-size: 16px;
 	margin-right: 7px;
 }
+.input {
+	padding: 8px 15px;
+	border: 2px solid var(--grey);
+	border-radius: var(--radius);
+}
+.input--max-width {
+	width: 100%;
+}
+.input__icon-box {
+	display: flex;
+	align-items: center;
+}
+.input__icon {
+	border-radius: 100%;
+	background-color: #f2f2f2;
+	padding: 8px;
+	font-size: 21px;
+}
+.input::placeholder {
+	opacity: 1;
+}
+.header-text {
+	font-size: 27px;
+    margin: 0;
+}
 body {
 	position: relative;
 	font-family: 'Roboto', sans-serif;
@@ -208,4 +233,19 @@ position: relative;
 	.nav__box {
 		width: 100%;
 	}
+}
+
+/* Logowanie */
+.login {
+	height: 100vh;
+}
+.login__container {
+	width: 450px;
+	background-color: white;
+	border-radius: var(--radius);
+	box-shadow: 12px 12px 12px 12px var(--grey-light);
+	box-shadow: 8px 8px 20px 7px #dbdbdb;
+}
+.login__images {
+	width: 74px;
 }
