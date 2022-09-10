@@ -1,6 +1,12 @@
 <?php
 include 'components/head.php';
 include 'components/nav.php';
+
+if (isset($_SESSION['user'])) {
+
+} else {
+	header('location: login.php');
+}
 ?>
 <main role="main" class="py-5">
 	<div class="container">

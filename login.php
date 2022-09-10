@@ -1,5 +1,16 @@
 <?php
 include 'components/head.php';
+
+$inputEmail = $_POST['email'];
+$statement = $db->query("SELECT * FROM users WHERE mail = '$inputEmail';");
+$user = $statement->fetch(PDO::FETCH_OBJ);
+
+if ($user !== false && $user->password === $_POST['password']) {
+	$_SESSION['user'] = $user;
+	header('location: /');
+} else {
+	$error = "błąd nazwy lub hasła";
+}
 ?>
 <main class="login d-flex align-items-center">
 	<div class="container d-flex justify-content-center">
@@ -8,14 +19,14 @@ include 'components/head.php';
 				<img class="login__images" src="images/logo.png" alt="">
 				<h2 class="ps-3 header-text">Logowanie do<br /> panelu biblioteki</h2>
 			</div>
-			<form class="login__form d-flex flex-column" action="/index.php">
+			<form class="login__form d-flex flex-column" action="" method="post">
 				<span class="d-flex">
 					<span class="input__icon-box pe-2">
 						<span class="material-symbols-outlined input__icon">
 							mail
 						</span>
 					</span>
-					<input class="input input--max-width" placeholder="Podaj mail">
+					<input name="email" type="text" class="input input--max-width" placeholder="Podaj mail" required>
 				</span>
 				<span class="d-flex">
 					<span class="input__icon-box pe-2">
@@ -23,7 +34,10 @@ include 'components/head.php';
 							key
 						</span>
 					</span>
-					<input class="input input--max-width mt-3" placeholder="Podaj hasło">
+					<input name="password" type="password" class="input input--max-width mt-3" placeholder="Podaj hasło" required>
+				</span>
+				<span>
+				<?= $error ?>
 				</span>
 				<input class="button--primary mt-4" type="submit" value="Zaloguj się">
 			</form>

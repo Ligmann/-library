@@ -10,3 +10,8 @@ try {
 } catch (PDOException $error) {
 		exit('Database error');
 }
+
+// SECJOM
+
+session_start();
+$_SESSION['user'];
