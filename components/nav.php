@@ -1,3 +1,6 @@
+<?php
+$user = $_SESSION['user'];
+?>
 <div class="container py-3">
 	<div class="d-flex justify-content-between">
 		<a href="index">
@@ -25,7 +28,9 @@
 			<div class="ms-3 nav__person d-sm-flex d-none">
 				<span>
 					<b>Zalogowany:</b> <br />
-					<span class="nav__person-name">Damian Ligmann</span>
+					<span class="nav__person-name">
+						<?=$user->first_name.' '.$user->last_name?>
+					</span>
 				</span>
 			</div>
 		</div>
