@@ -3,6 +3,7 @@
 $config = require_once 'database.php';
 
 try {
+	global $db;
 	$db = new PDO("mysql:host={$config['host']};dbname={$config['database']};charset=utf8", $config['user'], $config['password'], [
 		PDO::ATTR_EMULATE_PREPARES => false,
 		PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION //wyświetla błędy
@@ -14,4 +15,3 @@ try {
 // SECJOM
 
 session_start();
-$_SESSION['user'];
