@@ -1,5 +1,5 @@
 <?php
-$user = $_SESSION['user'];
+	$user = $_SESSION['user'];
 ?>
 <div class="container py-3">
 	<div class="d-flex justify-content-between">
@@ -21,7 +21,7 @@ $user = $_SESSION['user'];
 				<span class="material-symbols-outlined button__icon-function">person</span>
 				<span>Moje konto</span>
 			</button>
-			<button class="ms-3 button--primary d-lg-flex d-none">
+			<button class="ms-3 button--primary d-lg-flex d-none js-logout">
 				<span class="material-symbols-outlined button__icon-function">logout</span>
 				<span>Wyloguj się</span>
 			</button>
