@@ -29,5 +29,23 @@ buttonNav.addEventListener("click", e=> {
 
 let exitNav = document.querySelector(".js-nav-exit");
 exitNav.addEventListener("click", e=> {
-	nav.classList.remove("js-nav-active")
+	nav.classList.remove("js-nav-active");
+});
+
+//	LOGOUT
+let logout = document.querySelector(".js-logout");
+
+logout.addEventListener("click", ()=> {
+	var url = 'http://dev.library.pl/logout.php';
+	var formData = new FormData();
+	formData.append('post_button', true);
+
+	fetch(url, { method: 'POST', credentials: 'include', body: formData })
+	.then(function (response) {
+		return response.text();
+	})
+	.then(function (body) {
+		// console.log(body);
+		window.location.reload();
+	});
 });
