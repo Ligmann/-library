@@ -58,6 +58,12 @@
 .input::placeholder {
 	opacity: 1;
 }
+.input__error {
+	padding: 5px 12px;
+	background-color: #ff4c4c;
+	color: white;
+	border-radius: var(--radius);
+}
 .header-text {
 	font-size: 27px;
     margin: 0;
