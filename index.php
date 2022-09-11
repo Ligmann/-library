@@ -56,11 +56,13 @@ if (isset($_SESSION['user'])) {
 							<b>Oceń książkę:</b>
 							<div class="d-flex align-items-center">
 								<?php
-								for ($i = 1; $i <= $books_card_item->rating; $i++) {
+								for ($i = 1; $i <= 5; $i++) {
 									echo '<span class="material-symbols-outlined">star</span>';
 								}
 								?>
-								<span class="ms-2">0/5</span>
+								<span class="ms-2">
+								<?= $books_card_item->rating ?>
+								/5</span>
 							</div>
 						</div>
 						<div class="mt-3 book-card__description">
