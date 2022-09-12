@@ -4,15 +4,19 @@ include 'components/head.php';
 $inputEmail = $_POST['email'];
 $statement = $db->query("SELECT * FROM users WHERE mail = '$inputEmail';");
 $user = $statement->fetch(PDO::FETCH_OBJ);
-print_r($user);
-if ($user !== false && $user->password === $_POST['password']) {
-	$_SESSION['user'] = $user;
-	header('location: /');
+
+if($_POST) {
+	if ($user !== false && $user->password === $_POST['password']) {
+		$_SESSION['user'] = $user;
+		header('location: /');
+	}else {
+		$error = "Błędny mail lub hasło";
+	};
 };
 
 if($_SESSION) {
 	header('location: /');
-}
+};
 ?>
 <main class="login d-flex align-items-center">
 	<div class="container d-flex justify-content-center">
