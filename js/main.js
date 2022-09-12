@@ -1,4 +1,6 @@
+//	MODAL BOOK INDEX
 let buttonModalBook = document.querySelectorAll(".js-button-read-more");
+
 buttonModalBook.forEach(e => {
 	let idButton = e.dataset.id;
 	e.addEventListener("click", ()=> {
@@ -37,19 +39,21 @@ exitNav.addEventListener("click", e=> {
 });
 
 //	LOGOUT
-let logout = document.querySelector(".js-logout");
+let logout = document.querySelectorAll(".js-logout");
 
-logout.addEventListener("click", ()=> {
-	var url = 'http://dev.library.pl/logout.php';
-	var formData = new FormData();
-	formData.append('post_button', true);
+logout.forEach(e => {
+	e.addEventListener("click", ()=> {
+		var url = 'http://dev.library.pl/logout.php';
+		var formData = new FormData();
+		formData.append('post_button', true);
 
-	fetch(url, { method: 'POST', credentials: 'include', body: formData })
-	.then(function (response) {
-		return response.text();
-	})
-	.then(function (body) {
-		// console.log(body);
-		window.location.reload();
+		fetch(url, { method: 'POST', credentials: 'include', body: formData })
+		.then(function (response) {
+			return response.text();
+		})
+		.then(function (body) {
+			// console.log(body);
+			window.location.reload();
+		});
 	});
 });
