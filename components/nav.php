@@ -46,7 +46,9 @@
 		<div class="mb-3 nav__person d-flex d-sm-none">
 			<span>
 				<b>Zalogowany:</b> <br />
-				<span class="nav__person-name">Damian Ligmann</span>
+				<span class="nav__person-name">
+					<?=$user->first_name.' '.$user->last_name?>
+				</span>
 			</span>
 		</div>
 		<button class="mb-3 button--primary d-flex">
@@ -61,7 +63,7 @@
 			<span class="material-symbols-outlined button__icon-function">library_books</span>
 			<span>Moje wypożyczone książki</span>
 		</button>
-		<button class="mb-3 button--primary d-lg-none d-flex">
+		<button class="mb-3 button--primary d-lg-none d-flex js-logout">
 			<span class="material-symbols-outlined button__icon-function">logout</span>
 			<span>Wyloguj się</span>
 		</button>

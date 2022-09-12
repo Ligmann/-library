@@ -198,6 +198,9 @@ position: relative;
 .js-nav-active {
 	visibility: visible;
 }
+.js-nav-hidden {
+	overflow: hidden;
+}
 .nav__box {
 	background-color: white;
 	position: absolute;

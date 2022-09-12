@@ -20,16 +20,20 @@ buttonModalBook.forEach(e => {
 	});
 });
 
-
+//	NAV
 let buttonNav = document.querySelector(".js-button-nav");
 let nav = document.querySelector(".js-nav");
+let bodyNavStyles = document.querySelector("body");
+
 buttonNav.addEventListener("click", e=> {
-	nav.classList.add("js-nav-active")
+	nav.classList.add("js-nav-active");
+	bodyNavStyles.classList.add("js-nav-hidden");
 });
 
 let exitNav = document.querySelector(".js-nav-exit");
 exitNav.addEventListener("click", e=> {
 	nav.classList.remove("js-nav-active");
+	bodyNavStyles.classList.remove("js-nav-hidden");
 });
 
 //	LOGOUT
